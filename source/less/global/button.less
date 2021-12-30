@@ -1,0 +1,26 @@
+.button__background {
+  font-family: "pt sans bold", "arial", sans-serif;
+  background-color: @lightblue;
+  color: @white;
+  width: 280px;
+  padding-top: 15px;
+  padding-bottom: 17px;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @brightblue;
+  }
+  &:active {
+    background-color: @darkblue;
+    opacity: 0.3;
+  }
+  &:disabled {
+    background-color: @grey;
+  }
+}
