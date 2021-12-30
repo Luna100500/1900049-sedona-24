@@ -2,33 +2,45 @@
 background-image: url("../img/back-mobile.jpg");
 background-repeat: no-repeat;
 background-position: center;
-height: 381px;
-padding-left: 16px;
-padding-right: 16px;
+height: 384px;
+padding-left: 19px;
+padding-right: 19px;
+padding-top: 5px;
+background-color: @lightgrey;
 }
 
 .intro::before {
 position: absolute;
 content: url("../img/intro-triangle.svg");
-bottom: 491px;
+bottom: 429px;
+}
+
+.page-main__text-container {
+  padding-top: 28px;
+  padding-left: 26px;
+  padding-right: 26px;
 }
 
 .intro::after {
   position: absolute;
   content: url("../img/white-arrow.svg");
-  bottom:276px;
+  bottom: 187px;
   }
 
 .page-main__title {
-font-weight: bold;
-font-size: 17px;
+  font-family: "pt sans bold", "arial", sans-serif;
+  line-height: 26px;
+  font-size: 18px;
 text-align: center;
 text-transform: uppercase;
-padding-left: 16px;
-padding-right: 16px;
+margin: 0;
 }
 
 .page-main__text {
   text-align: center;
   text-transform: uppercase;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  padding-top: 15px;
 }

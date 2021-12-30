@@ -1,7 +1,12 @@
 .main-nav__toggle {
+  // display: none;
   position: absolute;
   right: 0;
   top: 0;
+
+  // @media (min-width: @tablet-width) {
+  //    display: none;
+  // }
 }
 
 .toggle-button {
@@ -10,5 +15,21 @@ background-color: transparent;
 padding-top: 17px;
 padding-bottom: 17px;
 padding-left: 16px;
-padding-right: 16px;
+padding-right: 20px;
+cursor: pointer;
+}
+
+.toggle-button__svg {
+  fill: @lightblue;
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+    }
+
+    &:focus {
+      outline: none;
+    }
 }

@@ -1,0 +1,42 @@
+.sightseeing {
+  margin-top: 14px;
+}
+
+.title-sightseeing {
+  padding-bottom: 36px;
+}
+
+.form__sightseeing-item {
+  height: 80px;
+  align-items: baseline;
+  display: flex;
+}
+
+.form__sightseeing-item:nth-last-child(1) {
+  height: 61px;
+}
+
+.control-checkbox {
+  position: absolute;
+  left: 0;
+  width: 47px;
+  height: 47px;
+  background: @lightgrey;
+  border-radius: 5px;
+  top: -18px;
+
+  &:hover {
+    background-color: @brightgrey;
+  }
+  &:active {
+    background-color: #D5D5D5;
+    opacity: 0.3;
+    }
+}
+
+.control-input[type="checkbox"]:checked + .control-checkbox::before {
+  position: absolute;
+  top: 17px;
+  left: 11px;
+  content: url("../img/tick.svg");
+}
