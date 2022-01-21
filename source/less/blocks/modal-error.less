@@ -1,4 +1,4 @@
-.modal-success {
+.modal-error {
   display: none;
   position: fixed;
   top: 40%;
@@ -6,16 +6,22 @@
   width: 320px;
 }
 
-.modal-success__container {
+.modal-error__container {
   display: block;
-  background: @white;
+  background-color: @white;
   padding-top: 40px;
   padding-left: 41px;
   padding-right: 41px;
-  padding-bottom: 29px;
+  padding-bottom: 35px;
 }
 
-.modal-success__title {
+.modal-error__button {
+  justify-content: center;
+  display: flex;
+  margin-top: 22px;
+}
+
+.modal-error__title {
   font-family: "pt sans bold", "arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -25,7 +31,7 @@
   text-align: center;
 }
 
-.modal-success__text {
+.modal-error__text {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 14px;
@@ -34,16 +40,6 @@
   text-align: center;
 }
 
-.modal-success__button {
-  background-color: @lightgrey;
-  justify-content: center;
-  display: flex;
-  width: 100%;
-  padding: 20px 0 20px 0;
-}
-
-.button-close {
+.button-ok {
   width: 180px;
-  font-size: 18px;
-  line-height: 26px;
 }

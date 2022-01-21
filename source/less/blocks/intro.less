@@ -1,0 +1,111 @@
+.intro__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 389px;
+  background: url("../img/back-mobile.jpg");
+  background-color: #008000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  align-items: center;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/back-mobile@2x.jpg");
+    background-color: #008000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/back-tablet.jpg");
+    background-color: #008000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 518px;
+    align-items: center;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-tablet@2x.jpg");
+      background-color: #008000;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 518px;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../img/back-desktop.jpg");
+    background-color: #008000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 518px;
+    align-items: center;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-desktop@2x.jpg");
+      background-color: #008000;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 518px;
+      align-items: center;
+    }
+  }
+}
+
+.intro__container::before {
+  position: absolute;
+  content: url("../img/intro-triangle.svg");
+  width: 1200px;
+  z-index: 2;
+  bottom: -6px;
+  fill: @white;
+}
+
+.intro__img {
+  @media (min-width: @tablet-width) {
+    width: 461px;
+    height: 350px;
+  }
+}
+
+.page-main__text-container {
+  padding-top: 28px;
+  padding-left: 26px;
+  padding-right: 26px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 52px;
+  }
+}
+
+.page-main__title {
+  font-family: "pt sans bold", "arial", sans-serif;
+  line-height: 26px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 16%;
+  }
+}
+
+.page-main__text {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  padding-top: 15px;
+}

@@ -1,0 +1,38 @@
+.page-header {
+  position: relative;
+  height: 56px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-header__link {
+  display: flex;
+  justify-content: center;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 2;
+  }
+}
+
+.page-header__logo {
+  z-index: 2;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 187px;
+    height: 96px;
+  }
+}

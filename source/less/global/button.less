@@ -13,14 +13,25 @@
   line-height: 26px;
   cursor: pointer;
 
+  @media (min-width: @tablet-width) {
+    width: 458px;
+  }
+
   &:hover {
     background-color: @brightblue;
   }
+
   &:active {
     background-color: @darkblue;
     opacity: 0.3;
   }
+
   &:disabled {
     background-color: @grey;
   }
+}
+
+.button__container {
+  display: flex;
+  justify-content: center;
 }
