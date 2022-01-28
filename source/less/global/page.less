@@ -9,13 +9,18 @@ html {
 .page-body {
   min-height: 100%;
   margin: 0;
-  background-color: @white;
   color: #000000;
+  opacity: 0.5;
+
+  @media (min-width: @desktop-width) {
+    background-color: #e7e5e5;
+  }
 }
 
 .page-body__container {
   width: 100%;
   margin: 0 auto;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -24,5 +29,8 @@ html {
   @media (min-width: @desktop-width) {
     margin: 0 auto;
     max-width: 1200px;
+    -webkit-box-shadow: 0px 0px 14px 2px rgba(34, 60, 80, 0.24);
+    -moz-box-shadow: 0px 0px 14px 2px rgba(34, 60, 80, 0.24);
+    box-shadow: 0px 0px 14px 2px rgba(34, 60, 80, 0.24);
   }
 }

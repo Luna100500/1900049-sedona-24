@@ -4,16 +4,17 @@
   justify-content: center;
   min-height: 389px;
   background: url("../img/back-mobile.jpg");
-  background-color: #008000;
+  background-color: @darkblue;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
   align-items: center;
+  overflow: hidden;
 
   @media (min-resolution: 2dppx) {
     background: url("../img/back-mobile@2x.jpg");
-    background-color: #008000;
+    background-color: @darkblue;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -22,7 +23,7 @@
 
   @media (min-width: @tablet-width) {
     background: url("../img/back-tablet.jpg");
-    background-color: #008000;
+    background-color: @darkblue;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -31,7 +32,7 @@
 
     @media (min-resolution: 2dppx) {
       background: url("../img/back-tablet@2x.jpg");
-      background-color: #008000;
+      background-color: @darkblue;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -42,7 +43,7 @@
 
   @media (min-width: @desktop-width) {
     background: url("../img/back-desktop.jpg");
-    background-color: #008000;
+    background-color: @darkblue;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -51,7 +52,7 @@
 
     @media (min-resolution: 2dppx) {
       background: url("../img/back-desktop@2x.jpg");
-      background-color: #008000;
+      background-color: @darkblue;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -74,17 +75,19 @@
   @media (min-width: @tablet-width) {
     width: 461px;
     height: 350px;
+    margin-top: -14px;
   }
 }
 
 .page-main__text-container {
-  padding-top: 28px;
-  padding-left: 26px;
-  padding-right: 26px;
+  padding-top: 33px;
+  padding-left: 22px;
+  padding-right: 23px;
   background-color: @white;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 52px;
+    padding-bottom: 39px;
+    padding-top: 45px;
   }
 }
 
@@ -98,6 +101,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 16%;
+    font-size: 21px;
   }
 }
 

@@ -8,6 +8,7 @@
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 256px;
     justify-content: center;
+    text-align: end;
   }
 }
 
@@ -17,13 +18,19 @@
   padding-left: 18px;
   padding-bottom: 24px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 26px;
+    padding-left: 17px;
+    padding-right: 28px;
+  }
 }
 
 .advantage__wrapper--first::after {
   position: absolute;
   content: url("../img/white-copy-2.svg");
   width: 100%;
-  top: -10px;
+  top: 0;
   transform: translateX(-50%);
 
   @media (min-width: @tablet-width) {
@@ -44,6 +51,7 @@
   line-height: 15px;
   text-transform: uppercase;
   margin: 0;
+  padding-top: 15px;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
@@ -55,6 +63,11 @@
   padding-top: 2px;
   padding-bottom: 2px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0px;
+    padding-bottom: 6px;
+  }
 }
 
 .advantage__text {
@@ -63,19 +76,19 @@
   line-height: 22px;
 }
 
-.advantage__photo-city {
-  background-image: url("../img/photo-city.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 260px;
-  background-size: cover;
+.advantage__photo-city--wraper {
+  min-width: 320px;
+  max-width: 800px;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/photo-city-tablet.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
     height: 256px;
-    background-size: cover;
+    overflow: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 256px;
+    overflow: hidden;
+    writing-mode: vertical-rl;
   }
 }
 
@@ -83,10 +96,11 @@
   padding-top: 37px;
   padding-bottom: 7px;
   padding-left: 20%;
-  padding-right: 20%;
+  padding-right: 10%;
 
   @media (min-width: @tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding-top: 158px;
     padding-left: 3%;
     padding-right: 3%;
@@ -163,7 +177,7 @@
 
 .icon-gift::before {
   content: url("../img/icon-gift.svg");
-  width: 39px;
+  width: 33px;
   height: 37px;
   position: absolute;
   left: -45px;
@@ -181,7 +195,7 @@
 
 .icon-food::before {
   content: url("../img/icon-burger.svg");
-  width: 39px;
+  width: 40px;
   height: 37px;
   position: absolute;
   left: -52px;
@@ -205,7 +219,7 @@
 }
 
 .advantage__wrapper--second {
-  padding-top: 44px;
+  padding-top: 29px;
   padding-right: 18px;
   padding-left: 18px;
   padding-bottom: 21px;
@@ -259,7 +273,7 @@
   }
 }
 
-.advantage__others {
+.others {
   @media (min-width: @tablet-width) {
     background-color: @lightgrey;
     display: grid;
@@ -269,7 +283,7 @@
 }
 
 .advantage__wrapper--third {
-  padding-top: 31px;
+  padding-top: 16px;
   padding-right: 19px;
   padding-left: 19px;
   padding-bottom: 11px;
@@ -281,7 +295,7 @@
 }
 
 .advantage__wrapper--fourth {
-  padding-top: 31px;
+  padding-top: 15px;
   padding-right: 35px;
   padding-left: 35px;
   padding-bottom: 11px;
@@ -293,9 +307,9 @@
 }
 
 .advantage__wrapper--fifth {
-  padding-top: 31px;
-  padding-right: 35px;
-  padding-left: 35px;
+  padding-top: 15px;
+  padding-right: 23px;
+  padding-left: 24px;
   padding-bottom: 11px;
   position: relative;
 
