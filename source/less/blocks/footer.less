@@ -7,8 +7,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: baseline;
-    padding-top: 36px;
+    padding-top: 18px;
     padding-bottom: 36px;
+    padding-left: 61px;
+    padding-right: 52px;
   }
 }
 
@@ -36,6 +38,11 @@
   grid-template-columns: 46px 46px 46px;
   grid-template-rows: 48px;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    margin-left: -9px;
+  }
 }
 
 .social-link {
