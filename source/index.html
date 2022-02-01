@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- <link rel="icon" href="favicon.ico"> -->
+  <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon.svg">
 
   <style>
@@ -29,7 +29,7 @@
     @media ( min-width: 1200px ) {
       HTML {
         /* Desktop layout */
-        background-image: url( "img/desctop.png" );
+        background-image: url( "img/desktop.png" );
       }
     }
   </style>
@@ -64,7 +64,7 @@
           </button>
         </div>
         <div class="main-nav__container">
-          <div class="main-nav__cross cross--closed">
+          <div class="main-nav__cross cross-closed">
             <button class="cross-button" type="button">
               <svg class="cross-button__svg" width="23" height="23" viewBox="0 0 23 23" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +75,7 @@
               <span class="visually-hidden">Закрыть меню</span>
             </button>
           </div>
-          <ul class="main-nav__list main-nav--nojs main-nav--closed site-list reset-list">
+          <ul class="main-nav__list main-nav-nojs main-nav-closed site-list reset-list">
             <li class="site-list__item">
               <a class="site-list__link first site-list__link--active" href="index.html">
                 Главная
@@ -108,22 +108,22 @@
       var navToggle = document.querySelector('.toggle-button');
       var navCross = document.querySelector('.main-nav__cross');
 
-      navMain.classList.remove('main-nav--nojs');
+      navMain.classList.remove('main-nav-nojs');
 
       navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
+        if (navMain.classList.contains('main-nav-closed')) {
+          navMain.classList.remove('main-nav-closed');
           navMain.classList.add('main-nav--opened');
-          navCross.classList.remove('cross--closed');
+          navCross.classList.remove('cross-closed');
         navCross.classList.add('cross--opened');
         }
       });
       navCross.addEventListener('click', function() {
         if (navMain.classList.contains('main-nav--opened')) {
           navMain.classList.remove('main-nav--opened');
-          navMain.classList.add('main-nav--closed');
+          navMain.classList.add('main-nav-closed');
           navCross.classList.remove('cross--opened');
-          navCross.classList.add('cross--closed');
+          navCross.classList.add('cross-closed');
         }
       });
     </script>
@@ -152,12 +152,12 @@
         <section class="advantage">
           <h3 class="visually-hidden">Преимущество №1.</h3>
           <div class="advantage__first">
-            <div class="advantage__wrapper--first advantage__wrapper--accent">
+            <div class="advantage__first__wrapper accent">
               <h4 class="advantage__title">настоящий городок</h4>
               <p class="advantage__num">— №1 —</p>
               <p class="advantage__text">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
-            <div class="advantage__photo--wraper">
+            <div class="advantage__photo__wraper">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/photo-city-desctop.jpg 1x, img/photo-city-desctop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
@@ -208,12 +208,12 @@
         <section class="advantage">
           <div class="advantage__second">
             <h3 class="visually-hidden">Преимущество №2.</h3>
-            <div class="advantage__wrapper--second advantage__wrapper--accent">
+            <div class="advantage__wrapper__second accent">
               <h4 class="advantage__title">ТАМ ЕСТЬ Мост дьявола</h4>
               <p class="advantage__num">— №2 —</p>
               <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <div class="advantage__photo--wraper">
+            <div class="advantage__photo__wraper">
 
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/photo-bridge-desctop.jpg 1x, img/photo-bridge-desctop@2x.jpg 2x">
@@ -228,7 +228,7 @@
         <div class="others">
           <section class="advantage">
             <h3 class="visually-hidden">Преимущество №3.</h3>
-            <div class="advantage__wrapper--third advantage__wrapper--no-accent">
+            <div class="advantage__wrapper__third no-accent">
               <h4 class="advantage__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h4>
               <p class="advantage__num">— №3 —</p>
               <p class="advantage__text">ВСЕ интересные места находятся очень близко</p>
@@ -237,7 +237,7 @@
 
           <section class="advantage">
             <h3 class="visually-hidden">Преимущество №4.</h3>
-            <div class="advantage__wrapper--fourth advantage__wrapper--no-accent">
+            <div class="advantage__wrapper__fourth no-accent">
               <h4 class="advantage__title">КРАСИВАЯ ДОРОГА</h4>
               <p class="advantage__num">— №4 —</p>
               <p class="advantage__text">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
@@ -246,7 +246,7 @@
 
           <section class="advantage">
             <h3 class="visually-hidden">Преимущество №5.</h3>
-            <div class="advantage__wrapper--fifth advantage__wrapper--no-accent">
+            <div class="advantage__wrapper__fifth no-accent">
               <h4 class="advantage__title">МАЛО ТУРИСТОВ</h4>
               <p class="advantage__num">— №5 —</p>
               <p class="advantage__text">Большинство едет в гранд каньон и толпится там</p>
@@ -263,8 +263,8 @@
           <p class="find-hotel__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
             в седоне</p>
         </div>
-        <div class="button__container">
-          <button type="button" class="button__background">
+        <div class="blue-button">
+          <button type="button" class="blue-button__background">
             НАЙТИ гостиницу
           </button>
         </div>

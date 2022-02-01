@@ -1,6 +1,19 @@
 .form__container {
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.form__body {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 0.8fr 0.8fr 0.8fr;
+  }
 }
 
 .form-group {
@@ -10,6 +23,11 @@
   position: relative;
   margin-top: 20px;
   padding-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .form-group::after {
@@ -29,7 +47,13 @@
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  padding-bottom: 19px;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 47px;
+    padding-bottom: 0;
+  }
 }
 
 .label__text-format {

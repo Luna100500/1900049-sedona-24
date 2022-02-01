@@ -6,9 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ваш отзыв | Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon.svg">
 
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("img/form/mobile-form.png");
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("img/form/tablet-form.png");
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1200px) {
+      HTML {
+        /* Desktop layout */
+        background-image: url("img/form/desktop-form.png");
+      }
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" type="text/css">
+  <script src="../node_modules/pixel-glass/script.js"></script>
 
 </head>
 
@@ -19,7 +46,11 @@
 
     <header class="page-header">
       <a class="page-header__link" href="index.html">
-        <img class="page-header__logo" src="img/logo-mobile.svg" width="102" height="84" alt="Седона.">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+          <img class="page-header__logo" src="img/logo-mobile.svg" width="102" height="84" alt="Седона.">
+        </picture>
       </a>
       <nav class="main-nav">
         <div class="main-nav__toggle">
@@ -34,7 +65,7 @@
           </button>
         </div>
         <div class="main-nav__container">
-          <div class="main-nav__cross">
+          <div class="main-nav__cross cross-closed">
             <button class="cross-button" type="button">
               <svg class="cross-button__svg" width="23" height="23" viewBox="0 0 23 23" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -45,26 +76,26 @@
               <span class="visually-hidden">Закрыть меню</span>
             </button>
           </div>
-          <ul class="main-nav__list site-list reset-list">
+          <ul class="main-nav__list main-nav-nojs main-nav-closed site-list reset-list">
             <li class="site-list__item">
-              <a class="site-list__link site-list__link--active" href="index.html">
+              <a class="site-list__link first site-list__link--active" href="index.html">
                 Главная
               </a>
 
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">
+              <a class="site-list__link second" href="catalog.html">
                 Фото и видео
               </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="form.html">
+              <a class="site-list__link third" href="form.html">
                 Форма Отзыва
               </a>
             </li>
 
             <li class="site-list__item">
-              <a class="site-list__link" href="https://htmlacademy.ru/">
+              <a class="site-list__link fourth" href="https://htmlacademy.ru/">
                 HTML Academy
               </a>
             </li>
@@ -72,6 +103,31 @@
         </div>
       </nav>
     </header>
+
+    <script>
+      var navMain = document.querySelector('.main-nav__list');
+      var navToggle = document.querySelector('.toggle-button');
+      var navCross = document.querySelector('.main-nav__cross');
+
+      navMain.classList.remove('main-nav-nojs');
+
+      navToggle.addEventListener('click', function () {
+        if (navMain.classList.contains('main-nav-closed')) {
+          navMain.classList.remove('main-nav-closed');
+          navMain.classList.add('main-nav--opened');
+          navCross.classList.remove('cross-closed');
+          navCross.classList.add('cross--opened');
+        }
+      });
+      navCross.addEventListener('click', function () {
+        if (navMain.classList.contains('main-nav--opened')) {
+          navMain.classList.remove('main-nav--opened');
+          navMain.classList.add('main-nav-closed');
+          navCross.classList.remove('cross--opened');
+          navCross.classList.add('cross-closed');
+        }
+      });
+    </script>
 
     <!--====== MAIN ======-->
 
@@ -81,7 +137,7 @@
 
       <section class="form-intro">
         <div class="form-intro__container">
-          <img class="form-intro__img" src="img/sedona.svg" alt="Седона.">
+          <img class="form-intro__img" src="img/sedona.svg" alt="Седона." width="229" height="39">
           </svg>
         </div>
         <div class="form-intro__text-container">
@@ -118,13 +174,17 @@
               <legend class="form-group__title">Контактная информация:</legend>
               <div class="phone">
                 <label class="phone__label label__text-format">
-                  Контактный телефон*:
+                  <span class="label__text">
+                    Контактный телефон*:
+                  </span>
                   <input class="phone-input" type="tel" placeholder="Введите телефон" required>
                 </label>
               </div>
               <div class="e-mail">
                 <label class="e-mail__label label__text-format">
-                  Электронная почта*:
+                  <span class="label__text">
+                    Электронная почта*:
+                  </span>
                   <input class="e-mail-input" type="email" placeholder="Введите e-mail" required>
                 </label>
               </div>
@@ -267,9 +327,12 @@
             <h3 class="designed-in__text">Разработано</h3>
             <div class="designed-in__logo">
               <a aria-label="Переход на страницу html-академии" class="designed-in__link"
-              href="https://htmlacademy.ru/intensive/adaptive">
-              <svg class="designed-in__icon" svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
-            </a>
+                href="https://htmlacademy.ru/intensive/adaptive">
+                <svg class="designed-in__icon" svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                  <path
+                    d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+                </svg>
+              </a>
             </div>
           </div>
 
@@ -285,7 +348,7 @@
         <h2 class="modal-error__title">что-то пошло не так!</h2>
         <p class="modal-error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <div class="modal-error__button">
-          <button type="button" class="button-ok button__background">
+          <button type="button" class="button-ok blue-button__background">
             OK
           </button>
         </div>
@@ -299,12 +362,12 @@
         <h2 class="modal-success__title">Ваш отзыв отправлен!</h2>
         <p class="modal-success__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
           опубликуем его на сайте.</p>
-        </div>
-        <div class="modal-success__button">
-          <button type="button" class="button-close button__background">
-            закрыть окно
-          </button>
-        </div>
+      </div>
+      <div class="modal-success__button">
+        <button type="button" class="button-close blue-button__background">
+          закрыть окно
+        </button>
+      </div>
 
     </section>
 
