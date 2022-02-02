@@ -14,22 +14,24 @@
   <style>
     HTML {
       background-repeat: no-repeat;
-      background-position:  50% 0;
+      background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url( "img/mobile.png" );
+      background-image: url("img/mobile.png");
     }
+
     /* Tablet */
-    @media ( min-width: 768px ) {
+    @media (min-width: 768px) {
       HTML {
         /* Tablet layout */
-        background-image: url( "img/tablet.png" );
+        background-image: url("img/tablet.png");
       }
     }
+
     /* Desktop */
-    @media ( min-width: 1200px ) {
+    @media (min-width: 1200px) {
       HTML {
         /* Desktop layout */
-        background-image: url( "img/desktop.png" );
+        background-image: url("img/desktop.png");
       }
     }
   </style>
@@ -110,15 +112,15 @@
 
       navMain.classList.remove('main-nav-nojs');
 
-      navToggle.addEventListener('click', function() {
+      navToggle.addEventListener('click', function () {
         if (navMain.classList.contains('main-nav-closed')) {
           navMain.classList.remove('main-nav-closed');
           navMain.classList.add('main-nav--opened');
           navCross.classList.remove('cross-closed');
-        navCross.classList.add('cross--opened');
+          navCross.classList.add('cross--opened');
         }
       });
-      navCross.addEventListener('click', function() {
+      navCross.addEventListener('click', function () {
         if (navMain.classList.contains('main-nav--opened')) {
           navMain.classList.remove('main-nav--opened');
           navMain.classList.add('main-nav-closed');
@@ -158,12 +160,15 @@
               <p class="advantage__text">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
             <div class="advantage__photo__wraper">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-city-desctop.jpg 1x, img/photo-city-desctop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
-              <img class="advantage__photo-city" src="img/photo-city.jpg" srcset="img/photo-city@2x.jpg 2x" width="520" height="260" alt="Город Седона.">
-            </picture>
-          </div>
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-city-desctop.jpg 1x, img/photo-city-desctop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+                <img class="advantage__photo-city" src="img/photo-city.jpg" srcset="img/photo-city@2x.jpg 2x"
+                  width="520" height="260" alt="Город Седона.">
+              </picture>
+            </div>
           </div>
 
 
@@ -216,9 +221,12 @@
             <div class="advantage__photo__wraper">
 
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/photo-bridge-desctop.jpg 1x, img/photo-bridge-desctop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-                <img class="advantage__photo-bridge" src="img/photo-bridge.jpg" srcset="img/photo-bridge@2x.jpg 2x" width="520" height="260" alt="Мост дьявола.">
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-bridge-desctop.jpg 1x, img/photo-bridge-desctop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                <img class="advantage__photo-bridge" src="img/photo-bridge.jpg" srcset="img/photo-bridge@2x.jpg 2x"
+                  width="520" height="260" alt="Мост дьявола.">
               </picture>
 
             </div>

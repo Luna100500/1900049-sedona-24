@@ -1,5 +1,12 @@
 .button-feedback {
   padding-bottom: 43px;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 26px;
+    padding-left: 60px;
+    padding-bottom: 48px;
+  }
 }
 
 .button-feedback__background {
@@ -28,5 +35,39 @@
 
   &:disabled {
     background-color: @grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    padding-left: -2px;
+    padding-right: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+    padding-top: 19px;
+    padding-bottom: 14px;
+    padding-right: 5px;
+  }
+}
+
+.required {
+  font-family: "pt sans", "arial", sans-serif;
+  color: #333333;
+  position: absolute;
+  font-size: 14px;
+  line-height: 26px;
+  right: -326px;
+  top: 4px;
+  text-transform: uppercase;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -480px;
+    top: 31px;
   }
 }

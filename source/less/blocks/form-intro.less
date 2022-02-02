@@ -4,7 +4,7 @@
 
 .form-intro::after {
   content: " ";
-  min-width: 320px;
+  width: 100%;
   height: 1px;
   background-color: #e5e5e5;
   bottom: 0;
@@ -38,6 +38,7 @@
     background-position: 50% -230px;
     background-size: cover;
     align-items: center;
+    padding: 19px 46px 33px;
   }
 
   @media (min-width: @tablet-width) {
@@ -57,8 +58,8 @@
       background-position: 50% -228px;
       background-size: cover;
       height: 195px;
-    align-items: flex-start;
-    padding: 94px 154px 0;
+      align-items: flex-start;
+      padding: 94px 154px 0;
     }
   }
 
@@ -103,6 +104,10 @@
 
   @media (min-width: @desktop-width) {
     padding: 110px 380px;
+    padding-top: 110px;
+    padding-right: 380px;
+    padding-left: 380px;
+    padding-bottom: 35px;
   }
 }
 
@@ -117,7 +122,6 @@
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 30px;
-
   }
 }
 
@@ -127,5 +131,5 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  padding-top: 15px;
+  padding-top: 16px;
 }

@@ -12,7 +12,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 0.8fr 0.8fr 0.8fr;
+    grid-template-rows: 1fr 0.8fr 0.7fr 0.8fr;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-rows: 1fr 0.6fr 0.4fr 0.8fr;
   }
 }
 
@@ -38,6 +43,15 @@
   height: 1px;
   bottom: 0;
   left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    left: 60px;
+  }
 }
 
 .form-group__title {
@@ -56,7 +70,7 @@
   }
 }
 
-.label__text-format {
+.text-format {
   text-transform: uppercase;
   margin: 0;
 }
