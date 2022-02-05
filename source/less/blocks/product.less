@@ -10,6 +10,17 @@
   }
 }
 
+.product__image-wrapper {
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: none;
+    opacity: 0.8;
+  }
+}
+
 .product::after {
   content: " ";
   background-color: @grey;
@@ -33,9 +44,10 @@
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
-    height: 80px;
     margin-top: -7px;
     align-items: center;
+    height: fit-content;
+    min-height: 80px;
   }
 
   @media (min-width: @desktop-width) {
@@ -43,8 +55,10 @@
     bottom: 3px;
     width: 100%;
     padding: 0;
-    color: white;
+    color: @white;
     background-color: rgba(0, 0, 0, 0.3);
+    height: fit-content;
+    min-height: 80px;
   }
 }
 

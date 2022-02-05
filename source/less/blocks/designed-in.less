@@ -1,0 +1,54 @@
+.designed-in {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: end;
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: center;
+    padding-left: 97px;
+  }
+}
+
+.designed-in__link {
+  &:focus-visible {
+    opacity: 0.3;
+    outline: none;
+  }
+}
+
+.designed-in__text {
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding-left: 9px;
+  padding-top: 8px;
+}
+
+.designed-in__icon {
+  fill: #000000;
+  width: 42px;
+  padding-left: 4px;
+
+  &:hover {
+    fill: @lightblue;
+  }
+
+  &:active {
+    fill: #000000;
+    opacity: 0.3;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    opacity: 0.3;
+    outline: none;
+  }
+}

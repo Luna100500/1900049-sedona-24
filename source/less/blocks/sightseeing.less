@@ -13,7 +13,7 @@
   }
 }
 
-.title-sightseeing {
+.sightseeing__title {
   padding-bottom: 36px;
 
   @media (min-width: @tablet-width) {
@@ -26,14 +26,14 @@
   }
 }
 
-.title-sightseeing::after {
+.sightseeing__title::after {
   content: " ";
   width: 123px;
   height: 1px;
   background-color: #dbdbdb;
   position: absolute;
   display: none;
-  left: 0px;
+  left: 0;
   top: 28px;
 
   @media (min-width: @tablet-width) {
@@ -46,20 +46,14 @@
   }
 }
 
-.contacts .form-group__title {
-  @media (min-width: @tablet-width) {
-    padding-bottom: 13px;
-  }
-}
-
-.title-sightseeing::before {
+.sightseeing__title::before {
   content: " ";
   width: 123px;
   height: 1px;
   background-color: #dbdbdb;
   position: absolute;
   display: none;
-  right: 0px;
+  right: 0;
   top: 28px;
 
   @media (min-width: @tablet-width) {
@@ -92,41 +86,6 @@
     display: flex;
     padding: 59px 60px 0;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
-}
-
-.form__sightseeing-item {
-  height: 80px;
-  align-items: baseline;
-  display: flex;
-}
-
-.form__sightseeing-item:nth-last-child(1) {
-  height: 61px;
-}
-
-.control-checkbox {
-  position: absolute;
-  left: 0px;
-  width: 56px;
-  height: 56px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  top: -18px;
-
-  &:hover {
-    background-color: @grey;
-  }
-
-  &:active {
-    background-color: #d5d5d5;
-    opacity: 0.3;
-  }
-}
-
-.control-input[type="checkbox"]:checked + .control-checkbox::before {
-  position: absolute;
-  top: 19px;
-  left: 16px;
-  content: url("../img/tick.svg");
 }

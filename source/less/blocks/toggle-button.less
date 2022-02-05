@@ -1,17 +1,3 @@
-.main-nav__toggle {
-  position: absolute;
-  right: 0;
-  top: 0;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.main-nav--nojs {
-  display: none;
-}
-
 .toggle-button {
   border: 0;
   background-color: transparent;
@@ -20,10 +6,6 @@
   padding-left: 16px;
   padding-right: 19px;
   cursor: pointer;
-}
-
-.toggle-button__svg {
-  fill: @lightblue;
 
   &:hover {
     opacity: 0.6;
@@ -34,6 +16,15 @@
   }
 
   &:focus {
-    outline: none;
+    opacity: 0.6;
   }
+
+  &:focus-visible {
+    outline: none;
+    border: none;
+  }
+}
+
+.toggle-button__svg {
+  fill: @lightblue;
 }

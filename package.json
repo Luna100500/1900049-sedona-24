@@ -18,12 +18,13 @@
     "pixel-glass": "^1.0.13",
     "postcss": "8.3.11",
     "postcss-csso": "5.0.1",
+    "postcss-less": "^6.0.0",
     "stylelint": "14.0.1",
     "stylelint-config-htmlacademy": "^0.1.11"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"src/less/**/*.less\" --syntax less",
+    "stylelint": "stylelint \"source/less/**/*.less\"",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp"
@@ -39,9 +40,9 @@
     "*.json",
     "*.js",
     "source/*.html",
-    "source/js/**/*.js",
-    "source/img/**/*.svg",
-    "source/less/**/*.less"
+    "source/js//*.js",
+    "source/img//*.svg",
+    "source/less//*.less"
   ],
   "engines": {
     "node": "16.13.0"

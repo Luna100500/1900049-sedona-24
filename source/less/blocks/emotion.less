@@ -31,7 +31,7 @@
   background-color: #dbdbdb;
   position: absolute;
   display: none;
-  left: 0px;
+  left: 0;
   top: 40px;
 
   @media (min-width: @desktop-width) {
@@ -47,7 +47,7 @@
   background-color: #dbdbdb;
   position: absolute;
   display: none;
-  right: 0px;
+  right: 0;
   top: 40px;
 
   @media (min-width: @tablet-width) {
@@ -68,6 +68,22 @@
   padding: 5px 20px;
   background-color: @lightgrey;
   margin: 0 auto;
+
+  &:hover {
+    background-color: @grey;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+  }
+
+  &:focus {
+    background-color: #d5d5d5;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
 
   @media (min-width: @tablet-width) {
     width: 608px;

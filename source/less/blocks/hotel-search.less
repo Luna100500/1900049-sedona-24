@@ -1,0 +1,48 @@
+.hotel-search {
+  display: flex;
+  justify-content: center;
+}
+
+.hotel-search__link {
+  width: 280px;
+  min-height: 58px;
+  background-color: @lightblue;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @brightblue;
+  }
+
+  &:focus {
+    background-color: @brightblue;
+  }
+
+  &:focus-visible {
+    background-color: @brightblue;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @darkblue;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: @grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+  }
+}
+
+.hotel-search__text {
+  font-family: "pt sans bold", "arial", sans-serif;
+  color: @white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 53px;
+}
