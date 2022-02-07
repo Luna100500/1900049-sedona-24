@@ -13,19 +13,16 @@
   }
 }
 
-.introduce::after {
-  content: " ";
-  width: 1px;
-  height: 292px;
-  background-color: #dbdbdb;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  display: none;
-  top: -79px;
-
+.introduce::before {
   @media (min-width: @tablet-width) {
-    display: block;
+    content: " ";
+    width: 1px;
+    height: 292px;
+    background-color: #dbdbdb;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: -79px;
   }
 }
 
